@@ -1,0 +1,336 @@
+<link rel='stylesheet' id='fancybox-css' href='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/fancybox/dist/jquery.fancybox.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='turn-css' href='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/css/turn.css' type='text/css' media='all' />
+
+<audio id="pageTurnSound" preload="auto">
+  <source src="411175__silverillusionist__page-turn-2 2.mp3" type="audio/mpeg">
+</audio>
+
+<style>
+  img:not([draggable]),
+  embed,
+  object,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<section class="main-section page-section no-margin">
+  <div class="container relative">
+    <div class="book-portfolio"> <a data-fancybox data-options='{"touch": false}' href="#bookPortfolioViewer"> <span class="book-portfolio-thumb"> <img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" />
+          <noscript>
+            <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+          </noscript>
+        </span> <span class="book-portfolio-view">Click xem chi tiết</span> </a> </div>
+    <div id="bookPortfolioViewer">
+      <div class="book-portfolio__wrap">
+        <div class="book-portfolio__inner">
+          <div id="bookPortfolio">
+            <!-- Next button -->
+            <button type="button" ignore="1" class="book-portfolio-next">
+              <svg aria-hidden="true" width="44" height="44" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 22L19 16L13 10" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <!-- Previous button -->
+            <button type="button" ignore="1" class="book-portfolio-prev">
+              <svg aria-hidden="true" width="44" height="44" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 22L13 16L19 10" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-02-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-02-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-03-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-03-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-04-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-04-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-05-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-05-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-06-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-06-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-07-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-07-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-08-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-08-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-09-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-09-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-10-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-10-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-11-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-11-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-12-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-12-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-13-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-13-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-14-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-14-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-15-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-15-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-16-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-16-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-17-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-17-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-18-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-18-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-19-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-19-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-20-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-20-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-21-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-21-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-22-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-22-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-23-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-23-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-24-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-24-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-25-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-25-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-26-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-26-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-27-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-27-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-28-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-28-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-29-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-29-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-30-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-30-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-31-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-31-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-32-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png" />
+              <noscript>
+                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-32-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
+              </noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Page Section -->
+<script type='text/javascript' src='https://adina.com.vn/wp-includes/js/jquery/jquery.js'></script>
+<script data-no-minify="1" async src="https://adina.com.vn/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.js"></script>
+<script type='text/javascript' src='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/fancybox/dist/jquery.fancybox.min.js'></script>
+<script type='text/javascript' src='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/js/turn.min.js'></script>
+<script>
+  window.lazyLoadOptions = {
+    elements_selector: "img[data-lazy-src],.rocket-lazyload",
+    data_src: "lazy-src",
+    data_srcset: "lazy-srcset",
+    data_sizes: "lazy-sizes",
+    class_loading: "lazyloading",
+    class_loaded: "lazyloaded",
+    threshold: 300,
+    callback_loaded: function(element) {
+      if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") {
+        if (element.classList.contains("lazyloaded")) {
+          if (typeof window.jQuery != "undefined") {
+            if (jQuery.fn.fitVids) {
+              jQuery(element).parent().fitVids();
+            }
+          }
+        }
+      }
+    }
+  };
+  window.addEventListener('LazyLoad::Initialized', function(e) {
+    var lazyLoadInstance = e.detail.instance;
+    if (window.MutationObserver) {
+      var observer = new MutationObserver(function(mutations) {
+        var image_count = 0;
+        var iframe_count = 0;
+        var rocketlazy_count = 0;
+        mutations.forEach(function(mutation) {
+          for (i = 0; i < mutation.addedNodes.length; i++) {
+            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
+              return;
+            }
+            if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
+              return;
+            }
+            images = mutation.addedNodes[i].getElementsByTagName('img');
+            is_image = mutation.addedNodes[i].tagName == "IMG";
+            iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
+            is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
+            rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
+            image_count += images.length;
+            iframe_count += iframes.length;
+            rocketlazy_count += rocket_lazy.length;
+            if (is_image) {
+              image_count += 1;
+            }
+            if (is_iframe) {
+              iframe_count += 1;
+            }
+          }
+        });
+        if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) {
+          lazyLoadInstance.update();
+        }
+      });
+      var b = document.getElementsByTagName("body")[0];
+      var config = {
+        childList: true,
+        subtree: true
+      };
+      observer.observe(b, config);
+    }
+  }, false);
+</script>
+<script>
+  (function($) {
+    'use strict';
+    $(document).ready(function() {
+      let widthScreen = $(window).width(),
+        widthDefault = 1241,
+        widthPortfolio = 1241,
+        heightDefault = 1754,
+        heightScreen = $(window).height(),
+        heightPortfolio = 1754,
+        container = $('#bookPortfolioViewer .book-portfolio__inner');
+      if (widthScreen > 1200) {
+        if (widthDefault < heightDefault) {
+          widthPortfolio = 1200 * widthDefault / heightDefault;
+        } else {
+          widthPortfolio = widthScreen - 320;
+        }
+      } else {
+        widthPortfolio = widthScreen - 16;
+      }
+      heightPortfolio = ((widthPortfolio / 2) * heightDefault) / widthDefault;
+      if (heightPortfolio > heightScreen) {
+        heightPortfolio = heightScreen - 16;
+        widthPortfolio = ((heightPortfolio * widthDefault) / heightDefault) * 2;
+      }
+      container.css('max-width', widthPortfolio + 'px');
+      const bookPortfolio = $('#bookPortfolio').turn({
+        animatedAutoCenter: true,
+        smartFlip: true,
+        autoScaleContent: true,
+        width: widthPortfolio,
+        height: heightPortfolio,
+      });
+      $(document).on('touchstart click', '#bookPortfolio .book-portfolio-next', function() {
+        bookPortfolio.turn('next');
+      });
+      $(document).on('touchstart click', '#bookPortfolio .book-portfolio-prev', function() {
+        bookPortfolio.turn('previous');
+      });
+      $(window).resize(function() {
+        widthScreen = $(window).width();
+        if (widthScreen > 1200) {
+          if (widthDefault < heightDefault) {
+            widthPortfolio = 1200 * widthDefault / heightDefault;
+          } else {
+            widthPortfolio = widthScreen - 320;
+          }
+        } else {
+          widthPortfolio = widthScreen - 16;
+        }
+        heightPortfolio = ((widthPortfolio / 2) * heightDefault) / widthDefault;
+        if (heightPortfolio > heightScreen) {
+          heightPortfolio = heightScreen - 16;
+          widthPortfolio = ((heightPortfolio * widthDefault) / heightDefault) * 2;
+        }
+        container.css('max-width', widthPortfolio + 'px');
+        bookPortfolio.turn('size', widthPortfolio, heightPortfolio);
+      });
+    });
+  })(jQuery);
+</script>
