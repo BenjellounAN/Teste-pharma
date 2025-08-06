@@ -1,336 +1,1228 @@
-<link rel='stylesheet' id='fancybox-css' href='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/fancybox/dist/jquery.fancybox.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='turn-css' href='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/css/turn.css' type='text/css' media='all' />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFood Express - Livraison McDonald's, KFC, Pizza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ff0000;
+            --secondary-color: #ffcc00;
+            --accent-color: #ffffff;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f8f8;
+            --gradient: linear-gradient(135deg, #ff0000 0%, #ffcc00 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
 
-<audio id="pageTurnSound" preload="auto">
-  <source src="411175__silverillusionist__page-turn-2 2.mp3" type="audio/mpeg">
-</audio>
+        /* Language Selector */
+        .lang-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1002;
+            display: flex;
+            gap: 10px;
+        }
 
-<style>
-  img:not([draggable]),
-  embed,
-  object,
-  video {
-    max-width: 100%;
-    height: auto;
-  }
-</style>
-<section class="main-section page-section no-margin">
-  <div class="container relative">
-    <div class="book-portfolio"> <a data-fancybox data-options='{"touch": false}' href="#bookPortfolioViewer"> <span class="book-portfolio-thumb"> <img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" />
-          <noscript>
-            <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-          </noscript>
-        </span> <span class="book-portfolio-view">Click xem chi tiết</span> </a> </div>
-    <div id="bookPortfolioViewer">
-      <div class="book-portfolio__wrap">
-        <div class="book-portfolio__inner">
-          <div id="bookPortfolio">
-            <!-- Next button -->
-            <button type="button" ignore="1" class="book-portfolio-next">
-              <svg aria-hidden="true" width="44" height="44" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 22L19 16L13 10" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-            <!-- Previous button -->
-            <button type="button" ignore="1" class="book-portfolio-prev">
-              <svg aria-hidden="true" width="44" height="44" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 22L13 16L19 10" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-01.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-01-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-02-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-02.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-02-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-03-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-03.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-03-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-04-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-04.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-04-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-05-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-05.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-05-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-06-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-06.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-06-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-07-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-07.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-07-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-08-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-08.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-08-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-09-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-09.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-09-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-10-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-10.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-10-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-11-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-11.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-11-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-12-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-12.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-12-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-13-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-13.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-13-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-14-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-14.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-14-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-15-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-15.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-15-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-16-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-16.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-16-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-17-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-17.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-17-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-18-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-18.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-18-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-19-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-19.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-19-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-20-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-20.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-20-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-21-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-21.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-21-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-22-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-22.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-22-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-23-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-23.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-23-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-24-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-24.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-24-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-25-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-25.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-25-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-26-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-26.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-26-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-27-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-27.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-27-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-28-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-28.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-28-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-29-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-29.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-29-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-30-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-30.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-30-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-31-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-31.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-31-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-            <div><img width="1241" height="1754" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201241%201754'%3E%3C/svg%3E" class="attachment-full size-full" alt="" data-lazy-srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-32-106x150.png 106w" data-lazy-sizes="(max-width: 1241px) 100vw, 1241px" data-lazy-src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png" />
-              <noscript>
-                <img width="1241" height="1754" src="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png" class="attachment-full size-full" alt="" srcset="https://adina.com.vn/wp-content/uploads/2023/12/TTK-32.png 1241w, https://adina.com.vn/wp-content/uploads/2023/12/TTK-32-106x150.png 106w" sizes="(max-width: 1241px) 100vw, 1241px" />
-              </noscript>
-            </div>
-          </div>
-        </div>
-      </div>
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-left: 10px;
+        }
+        
+        /* Navigation */
+        .nav-btn {
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 1.8rem;
+            display: none;
+            z-index: 1001;
+        }
+        
+        .nav-close {
+            display: none;
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin: 0 1rem;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            margin-top: 70px;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 600px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: #e60000;
+        }
+        
+        /* Menu Overlay */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: var(--gradient);
+            z-index: 1000;
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .menu-overlay.active {
+            right: 0;
+        }
+        
+        .menu-list {
+            list-style: none;
+            text-align: center;
+            width: 100%;
+            padding: 0 2rem;
+        }
+        
+        .menu-item {
+            margin: 2rem 0;
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .menu-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        /* Fast Food Brands */
+        .brands {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .brand-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .brand-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .brand-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .brand-logo img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+        
+        .brand-content {
+            padding: 1.5rem;
+            text-align: left;
+        }
+        
+        .brand-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .brand-desc {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .delivery-time {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .delivery-time i {
+            margin-right: 5px;
+        }
+        
+        /* Menu Items */
+        .menu-items {
+            padding: 0 2rem 5rem;
+        }
+        
+        .menu-category {
+            margin-bottom: 3rem;
+        }
+        
+        .category-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-title i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .item-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .item-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .item-content {
+            padding: 1.2rem;
+        }
+        
+        .item-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .item-desc {
+            color: #666;
+            margin-bottom: 0.8rem;
+            font-size: 0.8rem;
+        }
+        
+        .item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .item-price {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        .add-to-cart {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-link {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-link a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-link a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-link i {
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1rem;
+            gap: 10px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-btn {
+                display: block;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .menu-link {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .brand-grid, .items-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Language specific styles */
+        [lang="fr"], [lang="en"] {
+            display: none;
+        }
+
+        [lang="fr"].active, [lang="en"].active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="lang-selector">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
     </div>
-  </div>
-</section>
-<!-- End Page Section -->
-<script type='text/javascript' src='https://adina.com.vn/wp-includes/js/jquery/jquery.js'></script>
-<script data-no-minify="1" async src="https://adina.com.vn/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.js"></script>
-<script type='text/javascript' src='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/fancybox/dist/jquery.fancybox.min.js'></script>
-<script type='text/javascript' src='https://adina.com.vn/wp-content/themes/rhythm/custom/gallery/js/turn.min.js'></script>
-<script>
-  window.lazyLoadOptions = {
-    elements_selector: "img[data-lazy-src],.rocket-lazyload",
-    data_src: "lazy-src",
-    data_srcset: "lazy-srcset",
-    data_sizes: "lazy-sizes",
-    class_loading: "lazyloading",
-    class_loaded: "lazyloaded",
-    threshold: 300,
-    callback_loaded: function(element) {
-      if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") {
-        if (element.classList.contains("lazyloaded")) {
-          if (typeof window.jQuery != "undefined") {
-            if (jQuery.fn.fitVids) {
-              jQuery(element).parent().fitVids();
-            }
-          }
-        }
-      }
-    }
-  };
-  window.addEventListener('LazyLoad::Initialized', function(e) {
-    var lazyLoadInstance = e.detail.instance;
-    if (window.MutationObserver) {
-      var observer = new MutationObserver(function(mutations) {
-        var image_count = 0;
-        var iframe_count = 0;
-        var rocketlazy_count = 0;
-        mutations.forEach(function(mutation) {
-          for (i = 0; i < mutation.addedNodes.length; i++) {
-            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
-              return;
-            }
-            if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
-              return;
-            }
-            images = mutation.addedNodes[i].getElementsByTagName('img');
-            is_image = mutation.addedNodes[i].tagName == "IMG";
-            iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
-            is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
-            rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
-            image_count += images.length;
-            iframe_count += iframes.length;
-            rocketlazy_count += rocket_lazy.length;
-            if (is_image) {
-              image_count += 1;
-            }
-            if (is_iframe) {
-              iframe_count += 1;
-            }
-          }
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span lang="fr">FastFood Express</span>
+            <span lang="en" style="display:none">FastFood Express</span>
+            <i class="fas fa-hamburger"></i>
+        </div>
+        
+        <button class="nav-btn" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" lang="fr">Accueil</a>
+                    <a href="#" class="nav-link" lang="en" style="display:none">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#brands" class="nav-link" lang="fr">Marques</a>
+                    <a href="#brands" class="nav-link" lang="en" style="display:none">Brands</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link" lang="fr">Menu</a>
+                    <a href="#menu" class="nav-link" lang="en" style="display:none">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" lang="fr">Contact</a>
+                    <a href="#contact" class="nav-link" lang="en" style="display:none">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="nav-close" id="navClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="#" class="menu-link" lang="fr">Accueil</a>
+                <a href="#" class="menu-link" lang="en" style="display:none">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="#brands" class="menu-link" lang="fr">Nos Marques</a>
+                <a href="#brands" class="menu-link" lang="en" style="display:none">Our Brands</a>
+            </li>
+            <li class="menu-item">
+                <a href="#menu" class="menu-link" lang="fr">Notre Menu</a>
+                <a href="#menu" class="menu-link" lang="en" style="display:none">Our Menu</a>
+            </li>
+            <li class="menu-item">
+                <a href="#contact" class="menu-link" lang="fr">Contactez-nous</a>
+                <a href="#contact" class="menu-link" lang="en" style="display:none">Contact Us</a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link" lang="fr">Suivi de commande</a>
+                <a href="#" class="menu-link" lang="en" style="display:none">Track Order</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" lang="fr">Livraison de Fast-Food 24h/24</h1>
+            <h1 class="hero-title" lang="en" style="display:none">24/7 Fast Food Delivery</h1>
+            
+            <p class="hero-subtitle" lang="fr">McDonald's, KFC, Pizzas et plus encore livrés à votre porte</p>
+            <p class="hero-subtitle" lang="en" style="display:none">McDonald's, KFC, Pizzas and more delivered to your door</p>
+            
+            <a href="#menu" class="btn" lang="fr">Commandez Maintenant</a>
+            <a href="#menu" class="btn" lang="en" style="display:none">Order Now</a>
+        </div>
+    </section>
+    
+    <!-- Fast Food Brands -->
+    <section class="brands" id="brands">
+        <h2 class="section-title" lang="fr">Nos Marques Partenaires</h2>
+        <h2 class="section-title" lang="en" style="display:none">Our Partner Brands</h2>
+        
+        <div class="brand-grid">
+            <!-- McDonald's Card -->
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="McDonald's" class="brand-img">
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png" alt="McDonald's Logo">
+                </div>
+                <div class="brand-content">
+                    <h3 class="brand-title">McDonald's</h3>
+                    <p class="brand-desc" lang="fr">Les meilleurs burgers, frites et boissons de McDonald's livrés chez vous</p>
+                    <p class="brand-desc" lang="en" style="display:none">The best burgers, fries and drinks from McDonald's delivered to your home</p>
+                    <div class="delivery-time">
+                        <i class="fas fa-clock"></i>
+                        <span lang="fr">20-30 min</span>
+                        <span lang="en" style="display:none">20-30 min</span>
+                    </div>
+                    <a href="#mcdonalds" class="btn" lang="fr">Voir Menu</a>
+                    <a href="#mcdonalds" class="btn" lang="en" style="display:none">View Menu</a>
+                </div>
+            </div>
+            
+            <!-- KFC Card -->
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1606755456206-b25206bfa433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="KFC" class="brand-img">
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1200px-KFC_logo.svg.png" alt="KFC Logo">
+                </div>
+                <div class="brand-content">
+                    <h3 class="brand-title">KFC</h3>
+                    <p class="brand-desc" lang="fr">Poulet croustillant et burgers savoureux de KFC</p>
+                    <p class="brand-desc" lang="en" style="display:none">Crispy chicken and tasty burgers from KFC</p>
+                    <div class="delivery-time">
+                        <i class="fas fa-clock"></i>
+                        <span lang="fr">25-35 min</span>
+                        <span lang="en" style="display:none">25-35 min</span>
+                    </div>
+                    <a href="#kfc" class="btn" lang="fr">Voir Menu</a>
+                    <a href="#kfc" class="btn" lang="en" style="display:none">View Menu</a>
+                </div>
+            </div>
+            
+            <!-- Pizza Card -->
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80" alt="Pizza" class="brand-img">
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pizza_Hut_logo_2019.svg/1200px-Pizza_Hut_logo_2019.svg.png" alt="Pizza Logo">
+                </div>
+                <div class="brand-content">
+                    <h3 class="brand-title" lang="fr">Pizzas Premium</h3>
+                    <h3 class="brand-title" lang="en" style="display:none">Premium Pizzas</h3>
+                    <p class="brand-desc" lang="fr">Pizzas artisanales avec les meilleurs ingrédients</p>
+                    <p class="brand-desc" lang="en" style="display:none">Artisanal pizzas with the best ingredients</p>
+                    <div class="delivery-time">
+                        <i class="fas fa-clock"></i>
+                        <span lang="fr">30-45 min</span>
+                        <span lang="en" style="display:none">30-45 min</span>
+                    </div>
+                    <a href="#pizza" class="btn" lang="fr">Voir Menu</a>
+                    <a href="#pizza" class="btn" lang="en" style="display:none">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Items -->
+    <section class="menu-items" id="menu">
+        <!-- McDonald's Menu -->
+        <div class="menu-category" id="mcdonalds">
+            <h2 class="category-title">
+                <i class="fas fa-hamburger"></i>
+                <span lang="fr">Menu McDonald's</span>
+                <span lang="en" style="display:none">McDonald's Menu</span>
+            </h2>
+            
+            <div class="items-grid">
+                <!-- Big Mac -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1582196016295-f8c10f4320bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Big Mac" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title">Big Mac</h3>
+                        <p class="item-desc" lang="fr">Double steak, sauce spéciale, salade, cheddar, cornichons, oignons</p>
+                        <p class="item-desc" lang="en" style="display:none">Double beef patty, special sauce, lettuce, cheese, pickles, onions</p>
+                        <div class="item-footer">
+                            <span class="item-price">45 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- McChicken -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1606755456206-b25206bfa433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="McChicken" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title">McChicken</h3>
+                        <p class="item-desc" lang="fr">Filet de poulet pané, salade, mayonnaise</p>
+                        <p class="item-desc" lang="en" style="display:none">Breaded chicken fillet, lettuce, mayonnaise</p>
+                        <div class="item-footer">
+                            <span class="item-price">35 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frites -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Frites" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title" lang="fr">Frites Moyennes</h3>
+                        <h3 class="item-title" lang="en" style="display:none">Medium Fries</h3>
+                        <p class="item-desc" lang="fr">Frites dorées et croustillantes avec une touche de sel</p>
+                        <p class="item-desc" lang="en" style="display:none">Golden crispy fries with a touch of salt</p>
+                        <div class="item-footer">
+                            <span class="item-price">15 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coca-Cola -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2065&q=80" alt="Coca-Cola" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title">Coca-Cola</h3>
+                        <p class="item-desc" lang="fr">Boisson gazeuse rafraîchissante</p>
+                        <p class="item-desc" lang="en" style="display:none">Refreshing carbonated drink</p>
+                        <div class="item-footer">
+                            <span class="item-price">12 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- KFC Menu -->
+        <div class="menu-category" id="kfc">
+            <h2 class="category-title">
+                <i class="fas fa-drumstick-bite"></i>
+                <span lang="fr">Menu KFC</span>
+                <span lang="en" style="display:none">KFC Menu</span>
+            </h2>
+            
+            <div class="items-grid">
+                <!-- Bucket -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bucket" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title" lang="fr">Bucket 10 Pièces</h3>
+                        <h3 class="item-title" lang="en" style="display:none">10 Piece Bucket</h3>
+                        <p class="item-desc" lang="fr">10 morceaux de poulet croustillant avec 2 sauces au choix</p>
+                        <p class="item-desc" lang="en" style="display:none">10 pieces of crispy chicken with 2 sauces of your choice</p>
+                        <div class="item-footer">
+                            <span class="item-price">120 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Twister -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Twister" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title">Twister</h3>
+                        <p class="item-desc" lang="fr">Wrap poulet croustillant, salade et sauce</p>
+                        <p class="item-desc" lang="en" style="display:none">Crispy chicken wrap with lettuce and sauce</p>
+                        <div class="item-footer">
+                            <span class="item-price">35 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wings -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wings" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title" lang="fr">Ailes de Poulet (6 pièces)</h3>
+                        <h3 class="item-title" lang="en" style="display:none">Chicken Wings (6 pieces)</h3>
+                        <p class="item-desc" lang="fr">Ailes de poulet croustillantes avec sauce au choix</p>
+                        <p class="item-desc" lang="en" style="display:none">Crispy chicken wings with sauce of your choice</p>
+                        <div class="item-footer">
+                            <span class="item-price">45 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pepsi -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pepsi" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title">Pepsi</h3>
+                        <p class="item-desc" lang="fr">Boisson gazeuse rafraîchissante</p>
+                        <p class="item-desc" lang="en" style="display:none">Refreshing carbonated drink</p>
+                        <div class="item-footer">
+                            <span class="item-price">12 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pizza Menu -->
+        <div class="menu-category" id="pizza">
+            <h2 class="category-title">
+                <i class="fas fa-pizza-slice"></i>
+                <span lang="fr">Menu Pizza</span>
+                <span lang="en" style="display:none">Pizza Menu</span>
+            </h2>
+            
+            <div class="items-grid">
+                <!-- Margherita -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Margherita" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title">Margherita</h3>
+                        <p class="item-desc" lang="fr">Sauce tomate, mozzarella, basilic</p>
+                        <p class="item-desc" lang="en" style="display:none">Tomato sauce, mozzarella, basil</p>
+                        <div class="item-footer">
+                            <span class="item-price">65 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pepperoni -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1620374645498-af6bd681a0bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pepperoni" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title">Pepperoni</h3>
+                        <p class="item-desc" lang="fr">Sauce tomate, mozzarella, pepperoni</p>
+                        <p class="item-desc" lang="en" style="display:none">Tomato sauce, mozzarella, pepperoni</p>
+                        <div class="item-footer">
+                            <span class="item-price">75 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4 Fromages -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="4 Fromages" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title" lang="fr">4 Fromages</h3>
+                        <h3 class="item-title" lang="en" style="display:none">4 Cheese</h3>
+                        <p class="item-desc" lang="fr">Mozzarella, gorgonzola, parmesan, chèvre</p>
+                        <p class="item-desc" lang="en" style="display:none">Mozzarella, gorgonzola, parmesan, goat cheese</p>
+                        <div class="item-footer">
+                            <span class="item-price">80 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Royale -->
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1978&q=80" alt="Royale" class="item-img">
+                    <div class="item-content">
+                        <h3 class="item-title" lang="fr">Royale</h3>
+                        <h3 class="item-title" lang="en" style="display:none">Royal</h3>
+                        <p class="item-desc" lang="fr">Sauce tomate, mozzarella, jambon, champignons, olives</p>
+                        <p class="item-desc" lang="en" style="display:none">Tomato sauce, mozzarella, ham, mushrooms, olives</p>
+                        <div class="item-footer">
+                            <span class="item-price">85 DH</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 lang="fr">FastFood Express</h3>
+                <h3 lang="en" style="display:none">FastFood Express</h3>
+                <p lang="fr">Livraison de McDonald's, KFC et Pizzas 24h/24 à votre porte</p>
+                <p lang="en" style="display:none">24/7 delivery of McDonald's, KFC and Pizzas to your door</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 lang="fr">Liens Rapides</h3>
+                <h3 lang="en" style="display:none">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span lang="fr">Accueil</span>
+                            <span lang="en" style="display:none">Home</span>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#menu">
+                            <i class="fas fa-utensils"></i>
+                            <span lang="fr">Menu</span>
+                            <span lang="en" style="display:none">Menu</span>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">
+                            <i class="fas fa-truck"></i>
+                            <span lang="fr">Suivi de Commande</span>
+                            <span lang="en" style="display:none">Track Order</span>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">
+                            <i class="fas fa-question-circle"></i>
+                            <span lang="fr">FAQ</span>
+                            <span lang="en" style="display:none">FAQ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 lang="fr">Contactez-nous</h3>
+                <h3 lang="en" style="display:none">Contact Us</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">
+                        <a href="tel:+212612345678">
+                            <i class="fas fa-phone"></i>
+                            +212 6 12 34 56 78
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="mailto:contact@fastfoodexpress.com">
+                            <i class="fas fa-envelope"></i>
+                            contact@fastfoodexpress.com
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span lang="fr">Marrakech, Maroc</span>
+                            <span lang="en" style="display:none">Marrakech, Morocco</span>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">
+                            <i class="fas fa-clock"></i>
+                            <span lang="fr">Ouvert 24h/24</span>
+                            <span lang="en" style="display:none">Open 24/7</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p lang="fr">&copy; 2025 FastFood Express - Tous droits réservés</p>
+            <p lang="en" style="display:none">&copy; 2025 FastFood Express - All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navClose = document.getElementById('navClose');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const menuItems = document.querySelectorAll('.menu-item');
+        
+        navToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+            animateMenuItems();
         });
-        if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) {
-          lazyLoadInstance.update();
+        
+        navClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+        
+        // Animate menu items on open
+        function animateMenuItems() {
+            menuItems.forEach((item, index) => {
+                item.style.animation = `slideInRight 0.5s ease forwards ${index * 0.1 + 0.3}s`;
+                item.style.opacity = '0';
+                
+                // Reset animation for next open
+                setTimeout(() => {
+                    item.style.animation = '';
+                }, 1000);
+            });
         }
-      });
-      var b = document.getElementsByTagName("body")[0];
-      var config = {
-        childList: true,
-        subtree: true
-      };
-      observer.observe(b, config);
-    }
-  }, false);
-</script>
-<script>
-  (function($) {
-    'use strict';
-    $(document).ready(function() {
-      let widthScreen = $(window).width(),
-        widthDefault = 1241,
-        widthPortfolio = 1241,
-        heightDefault = 1754,
-        heightScreen = $(window).height(),
-        heightPortfolio = 1754,
-        container = $('#bookPortfolioViewer .book-portfolio__inner');
-      if (widthScreen > 1200) {
-        if (widthDefault < heightDefault) {
-          widthPortfolio = 1200 * widthDefault / heightDefault;
-        } else {
-          widthPortfolio = widthScreen - 320;
-        }
-      } else {
-        widthPortfolio = widthScreen - 16;
-      }
-      heightPortfolio = ((widthPortfolio / 2) * heightDefault) / widthDefault;
-      if (heightPortfolio > heightScreen) {
-        heightPortfolio = heightScreen - 16;
-        widthPortfolio = ((heightPortfolio * widthDefault) / heightDefault) * 2;
-      }
-      container.css('max-width', widthPortfolio + 'px');
-      const bookPortfolio = $('#bookPortfolio').turn({
-        animatedAutoCenter: true,
-        smartFlip: true,
-        autoScaleContent: true,
-        width: widthPortfolio,
-        height: heightPortfolio,
-      });
-      $(document).on('touchstart click', '#bookPortfolio .book-portfolio-next', function() {
-        bookPortfolio.turn('next');
-      });
-      $(document).on('touchstart click', '#bookPortfolio .book-portfolio-prev', function() {
-        bookPortfolio.turn('previous');
-      });
-      $(window).resize(function() {
-        widthScreen = $(window).width();
-        if (widthScreen > 1200) {
-          if (widthDefault < heightDefault) {
-            widthPortfolio = 1200 * widthDefault / heightDefault;
-          } else {
-            widthPortfolio = widthScreen - 320;
-          }
-        } else {
-          widthPortfolio = widthScreen - 16;
-        }
-        heightPortfolio = ((widthPortfolio / 2) * heightDefault) / widthDefault;
-        if (heightPortfolio > heightScreen) {
-          heightPortfolio = heightScreen - 16;
-          widthPortfolio = ((heightPortfolio * widthDefault) / heightDefault) * 2;
-        }
-        container.css('max-width', widthPortfolio + 'px');
-        bookPortfolio.turn('size', widthPortfolio, heightPortfolio);
-      });
-    });
-  })(jQuery);
-</script>
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOverlay.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.brand-card, .section-title, .item-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.animation = 'fadeInUp 1s ease forwards';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        // Trigger once on load
+        window.addEventListener('load', animateOnScroll);
+
+        // Language switcher
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const lang = button.getAttribute('data-lang');
+                
+                // Update active button
+                langButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+                
+                // Show/hide language content
+                document.querySelectorAll(`[lang="fr"], [lang="en"]`).forEach(el => {
+                    el.style.display = 'none';
+                });
+                
+                document.querySelectorAll(`[lang="${lang}"]`).forEach(el => {
+                    el.style.display = 'block';
+                });
+            });
+        });
+
+        // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const itemCard = button.closest('.item-card');
+                const itemName = itemCard.querySelector('.item-title').textContent;
+                const itemPrice = itemCard.querySelector('.item-price').textContent;
+                
+                // Animation
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.background = '#4CAF50';
+                
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-plus"></i>';
+                    button.style.background = 'var(--secondary-color)';
+                }, 1000);
+                
+                // In a real app, you would add the item to a cart array or object
+                console.log(`Added to cart: ${itemName} - ${itemPrice}`);
+            });
+        });
+    </script>
+</body>
+</html>
